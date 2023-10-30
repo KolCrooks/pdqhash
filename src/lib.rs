@@ -310,7 +310,7 @@ const BUFFER_W_H: usize = 64;
 const DCT_OUTPUT_W_H: usize = 16;
 const DCT_OUTPUT_MATRIX_SIZE: usize = DCT_OUTPUT_W_H * DCT_OUTPUT_W_H;
 
-const HASH_LENGTH: usize = DCT_OUTPUT_MATRIX_SIZE / 8;
+pub const HASH_LENGTH: usize = DCT_OUTPUT_MATRIX_SIZE / 8;
 
 /// Perform a discrete cosine transform from a 64x64 matrix and compute only a 16x16 corner of it. Quicker than computing the whole thing.
 fn dct64_to_16<const OUT_NUM_ROWS: usize, const OUT_NUM_COLS: usize>(
